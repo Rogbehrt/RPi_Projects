@@ -25,21 +25,19 @@ p1 = 'Hola Papa'
 p2 = 'La pantalla es\nazul'
 p3 = 'Y las letras son\nblancas'
 p4 = 'Gracias por los\npines.'
-gracias = [p1,p2,p3]
+gracias = [p1,p2,p3,p4]
 def main():
     def mensaje(m):
         lcd.clear()
         lcd.blink(True)
         lcd.message(m)
+        button.wait_for_press()
         lcd.blink(False)
     for parte in gracias:
         button.wait_for_press()
         mensaje(parte)
     lcd.clear()
     lcd.blink(False)
-    button.wait_for_press()
-    mensaje(p4)
-    lcd.clear()
     button.wait_for_press()
     message = '=D'
     lcd.message(message)
