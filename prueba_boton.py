@@ -1,7 +1,10 @@
 #!/usr/bin/python
 import time
 import Adafruit_CharLCD as LCD
+import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(3, GPIO.IN)
 # LCD settings
 lcd_rs        = 12
 lcd_en        = 06
@@ -23,7 +26,6 @@ p2 = 'La pantalla es\nazul'
 p3 = 'Y las letras son\nblancas'
 p4 = 'Gracias por los\npines.'
 gracias = [p1,p2,p3]
-
 def main():
     def mensaje(m):
         lcd.clear()
@@ -61,4 +63,5 @@ def main():
     s(2)
     lcd.clear()
 
-main()
+if GPIO.input(3):
+    lcd.message('Hola')
