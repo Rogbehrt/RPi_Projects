@@ -29,16 +29,15 @@ def mensaje(m):
     lcd.blink(True)
     lcd.message(m)
     s(2)
+    lcd.blink(False)
 for parte in gracias:
     mensaje(parte)
-lcd.clear()
-lcd.blink(False)
 lcd.clear()
 lcd.show_cursor(True)
 mensaje(p4)
 s(5)
-lcd.clear()
 lcd.show_cursor(False)
+lcd.clear()
 message = '=D'
 lcd.message(message)
 for i in range(lcd_columns-len(message)):
