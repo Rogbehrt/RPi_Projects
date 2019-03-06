@@ -64,7 +64,8 @@ def main():
     lcd.clear()
 
 presionado = button.is_pressed()
-if presionado:
-    lcd.message('Hola')
-    s(1)
-    lcd.clear()
+while True:
+    if presionado:
+        lcd.message('Hola')
+        s(1)
+        lcd.clear()
