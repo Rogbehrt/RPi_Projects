@@ -33,28 +33,28 @@ def mensaje(m):
 for parte in gracias:
     mensaje(parte)
 lcd.clear()
-lcd.show_cursor(True)
+lcd.blink(False)
+# lcd.show_cursor(True)
 mensaje(p4)
-s(5)
-lcd.show_cursor(False)
+s(2)
+# lcd.show_cursor(False)
 lcd.clear()
 message = '=D'
 lcd.message(message)
 for i in range(lcd_columns-len(message)):
-    s(0.5)
+    s()
     lcd.move_right()
 for i in range(lcd_columns-len(message)):
-    s(0.5)
+    s()
     lcd.move_left()
-s(2)
 lcd.clear()
 message = '\n=D'
 lcd.message(message)
 for i in range(lcd_columns-len(message)):
-    s(0.5)
+    s()
     lcd.move_right()
 for i in range(lcd_columns-len(message)):
-    s(0.5)
+    s()
     lcd.move_left()
 s(2)
 lcd.clear()
