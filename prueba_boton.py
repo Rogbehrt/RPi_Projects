@@ -63,5 +63,5 @@ def main():
     s(2)
     lcd.clear()
 
-button.wait_for_press()
-lcd.message('Hola')
+if button.is_pressed():
+    lcd.message('Hola')
