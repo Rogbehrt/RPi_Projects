@@ -31,23 +31,19 @@ def main():
         lcd.clear()
         lcd.blink(True)
         lcd.message(m)
-        s(2)
         lcd.blink(False)
     for parte in gracias:
         button.wait_for_press()
         mensaje(parte)
     lcd.clear()
     lcd.blink(False)
-    # lcd.show_cursor(True)
     button.wait_for_press()
     mensaje(p4)
-    s(2)
-    # lcd.show_cursor(False)
     lcd.clear()
     button.wait_for_press()
     message = '=D'
     lcd.message(message)
-    s(2)
+    button.wait_for_press()
     for i in range(lcd_columns-len(message)):
         s(0.2)
         lcd.move_right()
@@ -63,7 +59,7 @@ def main():
     for i in range(lcd_columns-len(message)):
         s(0.2)
         lcd.move_left()
-    s(2)
+    button.wait_for_press()
     lcd.clear()
 
 main()
