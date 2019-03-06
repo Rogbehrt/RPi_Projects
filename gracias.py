@@ -21,10 +21,10 @@ def s(t=0.33):
 p1 = 'Hola Papa'
 p2 = 'La pantalla es\nazul'
 p3 = 'Y las letras son\nblancas'
-mensaje = [p1,p2,p3]
+gracias = [p1,p2,p3]
 
 def mensaje():
-    for parte in mensaje:
+    for parte in gracias:
         lcd.clear()
         lcd.blick(True)
         lcd.message(parte)
