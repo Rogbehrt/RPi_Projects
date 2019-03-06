@@ -27,36 +27,34 @@ p3 = 'Y las letras son\nblancas'
 p4 = 'Gracias por los\npines.'
 gracias = [p1,p2,p3,p4]
 def main():
+
     def mensaje(m):
         lcd.clear()
         lcd.blink(True)
         lcd.message(m)
-        button.wait_for_press()
         lcd.blink(False)
+
+    def animacion(msg):
+        lcd.message(msg)
+        for i in range(lcd_columns-len(msg)):
+            s(0.2)
+            lcd.move_right()
+        for i in range(lcd_columns-len(msg)):
+            s(0.2)
+            lcd.move_left()
+        lcd.clear()
+
+
     for parte in gracias:
         button.wait_for_press()
         mensaje(parte)
+    button.wait_for_press()
     lcd.clear()
     lcd.blink(False)
-    button.wait_for_press()
-    message = '=D'
-    lcd.message(message)
-    button.wait_for_press()
-    for i in range(lcd_columns-len(message)):
-        s(0.2)
-        lcd.move_right()
-    for i in range(lcd_columns-len(message)):
-        s(0.2)
-        lcd.move_left()
-    lcd.clear()
-    message = '\n=D'
-    lcd.message(message)
-    for i in range(lcd_columns-len(message)):
-        s(0.2)
-        lcd.move_right()
-    for i in range(lcd_columns-len(message)):
-        s(0.2)
-        lcd.move_left()
+    msg1 = '=D'
+    animacion(msg1)
+    msg2='\n=D'
+    animacion(msg2)
     button.wait_for_press()
     lcd.clear()
 
