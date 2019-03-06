@@ -64,4 +64,4 @@ def main():
     lcd.clear()
 
 if GPIO.input(3):
-    lcd.message('Hola')
+    print('Hola')
