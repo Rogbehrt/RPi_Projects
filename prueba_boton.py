@@ -34,14 +34,17 @@ def main():
         s(2)
         lcd.blink(False)
     for parte in gracias:
+        button.wait_for_press()
         mensaje(parte)
     lcd.clear()
     lcd.blink(False)
     # lcd.show_cursor(True)
+    button.wait_for_press()
     mensaje(p4)
     s(2)
     # lcd.show_cursor(False)
     lcd.clear()
+    button.wait_for_press()
     message = '=D'
     lcd.message(message)
     s(2)
@@ -63,9 +66,9 @@ def main():
     s(2)
     lcd.clear()
 
-
-while True:
-    button.wait_for_press(5)
-    lcd.message('Hola')
-    s(1)
-    lcd.clear()
+main()
+# while True:
+#     button.wait_for_press()
+#     lcd.message('Hola')
+#     s(1)
+#     lcd.clear()
