@@ -65,7 +65,7 @@ def main():
 
 presionado = button.value()
 while True:
-    if presionado == 1:
-        lcd.message('Hola')
-        s(1)
-        lcd.clear()
+    button.wait_for_press(5)
+    lcd.message('Hola')
+    s(1)
+    lcd.clear()
