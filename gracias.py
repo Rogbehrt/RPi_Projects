@@ -43,19 +43,19 @@ message = '=D'
 lcd.message(message)
 s(2)
 for i in range(lcd_columns-len(message)):
-    s(0.1)
+    s(0.2)
     lcd.move_right()
 for i in range(lcd_columns-len(message)):
-    s(0.1)
+    s(0.2)
     lcd.move_left()
 lcd.clear()
 message = '\n=D'
 lcd.message(message)
 for i in range(lcd_columns-len(message)):
-    s(0.1)
+    s(0.2)
     lcd.move_right()
 for i in range(lcd_columns-len(message)):
-    s(0.1)
+    s(0.2)
     lcd.move_left()
 s(2)
 lcd.clear()
