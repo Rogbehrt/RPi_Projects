@@ -1,6 +1,9 @@
 #!/usr/bin/python
 import time
 import Adafruit_CharLCD as LCD
+from gpiozero import Button
+
+button = Button(2)
 
 # LCD settings
 lcd_rs        = 12
@@ -60,5 +63,5 @@ def main():
         lcd.move_left()
     s(2)
     lcd.clear()
-
+button.wait_for_press()
 main()
