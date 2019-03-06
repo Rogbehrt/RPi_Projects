@@ -1,10 +1,10 @@
 #!/usr/bin/python
 import time
 import Adafruit_CharLCD as LCD
-import RPi.GPIO as GPIO
+from gpiozero import Button
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(3, GPIO.IN)
+button = Button(2)
+
 # LCD settings
 lcd_rs        = 12
 lcd_en        = 06
@@ -63,5 +63,5 @@ def main():
     s(2)
     lcd.clear()
 
-if GPIO.input(3):
-    print('Hola')
+button.wait_for_press()
+print('Hola')
