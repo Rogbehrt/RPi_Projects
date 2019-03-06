@@ -26,7 +26,7 @@ gracias = [p1,p2,p3]
 def mensaje():
     for parte in gracias:
         lcd.clear()
-        lcd.blick(True)
+        lcd.blink(True)
         lcd.message(parte)
         s(2)
 
