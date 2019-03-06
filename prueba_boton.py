@@ -64,4 +64,4 @@ def main():
     lcd.clear()
 
 button.wait_for_press()
-print('Hola')
+lcd.message('Hola')
