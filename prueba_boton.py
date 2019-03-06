@@ -63,7 +63,7 @@ def main():
     s(2)
     lcd.clear()
 
-presionado = button.value()
+
 while True:
     button.wait_for_press(5)
     lcd.message('Hola')
