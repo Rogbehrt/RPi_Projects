@@ -17,16 +17,17 @@ lcd = LCD.Adafruit_CharLCD(lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7, lcd_c
 def s(t=0.33):
     return time.sleep(t)
 
-def mensaje(lista):
-    for parte in lista:
-        lcd.clear()
-        lcd.blick(True)
-        lcd.message(parte)
-        s(2)
-
 # Partes del mensaje
 p1 = 'Hola Papa'
 p2 = 'La pantalla es\nazul'
 p3 = 'Y las letras son\nblancas'
 mensaje = [p1,p2,p3]
-mensaje(mensaje)
+
+def mensaje():
+    for parte in mensaje:
+        lcd.clear()
+        lcd.blick(True)
+        lcd.message(parte)
+        s(2)
+
+mensaje()
