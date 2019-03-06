@@ -21,13 +21,28 @@ def s(t=0.33):
 p1 = 'Hola Papa'
 p2 = 'La pantalla es\nazul'
 p3 = 'Y las letras son\nblancas'
+p4 = 'Gracias por los\npines.'
 gracias = [p1,p2,p3]
 
-def mensaje():
-    for parte in gracias:
-        lcd.clear()
-        lcd.blink(True)
-        lcd.message(parte)
-        s(2)
-
-mensaje()
+def mensaje(m):
+    lcd.clear()
+    lcd.blink(True)
+    lcd.message(m)
+    s(2)
+for parte in gracias:
+    mensaje(parte)
+lcd.clear()
+lcd.show_cursor(True)
+mensaje(p4)
+s(5)
+lcd.clear()
+message = '=D'
+lcd.message(message)
+for i in range(lcd_columns-len(message)):
+    s(0.5)
+    lcd.move_right()
+for i in range(lcd_columns-len(message)):
+    s(0.5)
+    lcd.move_left()
+s(2)
+lcd.clear()
