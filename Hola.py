@@ -64,7 +64,9 @@ def main():
     for i in range(lcd_columns-len(message)):
         s(0.1)
         lcd.move_left()
-    s(1)
+    s(0.5)
     lcd.clear()
-button.wait_for_press()
-main()
+    
+while True:
+    button.wait_for_press()
+    main()
