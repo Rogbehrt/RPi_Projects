@@ -44,6 +44,7 @@ def main():
     # lcd.show_cursor(False)
     lcd.clear()
     lcd.message('Hola Vicent !')
+    s(2)
     lcd.clear()
     message = '=D'
     lcd.message(message)
